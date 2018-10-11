@@ -10,6 +10,12 @@ When a new window is opened with a single folder:
     cd "$HOME/Library/Application Support/Sublime Text 3/Packages"
     git clone https://github.com/noahcoad/auto_open_notes.git
 
+    # then test it!
+    subl auto_open_notes
+
+    # when opening the folder, the notes.txt and 
+    # auto_open_notes.py files should have automatically opened as well
+
 
 ## To Use
 Try having a notes.txt or readme.md file in a folder and opening that folder in sublime.
@@ -17,11 +23,6 @@ Try having a notes.txt or readme.md file in a folder and opening that folder in 
     mkdir ~/tmp
     echo hello world > ~/tmp/notes.txt
     subl ~/tmp
-
-or 
-
-    git clone https://github.com/noahcoad/auto_open_notes.git
-    subl auto_open_notes
 
 
 ## See Also
