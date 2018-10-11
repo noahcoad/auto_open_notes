@@ -2,5 +2,7 @@ auto_open_notes.py
 ~/tmp
 sublime.log_commands(True)
 ../notes.txt
-~/code/prjs/sublime/notes.txt
+~/code/prjs/sublime
 https://github.com/noahcoad/auto_open_notes
+backup: zip -r ~/code/prjs/sublime/auto_open_notes/backup.zip "/Users/ncoad/Library/Application Support/Sublime Text 3/Packages/auto_open_notes"
+https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.EventListener

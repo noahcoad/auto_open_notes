@@ -2,7 +2,7 @@
 
 When a new window is opened with a single folder:
 1. A `.sublime.autoopen` file is looked for.  If it exists, each file listed in the file is then opened
-2. Otherwise it'll look for a `notes.txt`, then `readme.md`, then `readme` files and opens the first
+2. Otherwise it'll look for a `notes.txt`, `readme.md`, `readme.txt`, then `readme` files and opens the first
 
 
 ## To Install
@@ -37,3 +37,14 @@ Combined with the [Open URL](https://github.com/noahcoad/open-url) plugin ... cr
 
 ## Random Thoughts
 Should this be renamed to "Auto Open Readme"?  bc most people use readme files instead of notes? 
+
+
+## Backlog
+Improvement ideas for contributing and improving...
+
+* Add to [Package Control](https://packagecontrol.io/docs/submitting_a_package)
+* Move default set of files to open (like notes.txt, readme.txt, etc) to a settings file that the user can override
+
+
+## Acknowledgments 
+Shout out to [@josiahcoad](https://github.com/josiahcoad) for code reviewing and improvement ideas!
