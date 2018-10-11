@@ -19,6 +19,11 @@ Try having a notes.txt or readme.md file in a folder and opening that folder in 
     echo hello world > ~/tmp/notes.txt
     subl ~/tmp
 
+or 
+
+    git clone https://github.com/noahcoad/auto_open_notes.git
+    subl auto_open_notes
+
 
 ## See Also
 
