@@ -12,7 +12,6 @@ When a new window is opened with a single folder:
 
 
 ## To Use
-
 Try having a notes.txt or readme.md file in a folder and opening that folder in sublime.
 
     mkdir ~/tmp
@@ -26,7 +25,6 @@ or
 
 
 ## See Also
-
 Check out my other Sublime Text 3 plugins:
 * [Open URL](https://github.com/noahcoad/open-url)
 * [Google Spell Check](https://github.com/noahcoad/google-spell-check)
@@ -34,3 +32,7 @@ Check out my other Sublime Text 3 plugins:
 
 ## The sweet flow...
 Combined with the [Open URL](https://github.com/noahcoad/open-url) plugin ... create a projects.txt file that you put lines in for each project folder.  Then just open this projects.txt file, put the cursor over a line, ctrl+u to "open url" to that folder, and bamn, the folder is opened and the appropriate notes/readme file is opened automatically.
+
+
+## Random Thoughts
+Should this be renamed to "Auto Open Readme"?  bc most people use readme files instead of notes? 
