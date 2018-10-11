@@ -27,8 +27,7 @@ class auto_open_notes(sublime_plugin.EventListener):
 					for folder in w.folders():                         # for autoopen files, check each folder in the project
 						autoopen = os.path.join(folder, '.sublime.autoopen')
 						if os.path.exists(autoopen):                     # if an autoopen file exists, open each file listed in there
-							for line in open(autoopen).readlines():        # get a file name on each line
-								line = line.strip()                          # get rid of whitespace
+							for line in [x.strip() for x in open(autoopen).readlines() if len(x) > 0 and x[0:1] != "#"]:        # get a file name on each line, ignore lines starting with "#"
 								file = os.path.join(folder, line)            # use project folder as base
 								if os.path.exists(file):                     # check to see if the file exists
 									w.open_file(file)                          # open it
