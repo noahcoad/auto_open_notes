@@ -7,8 +7,6 @@
 #
 # https://github.com/noahcoad/auto_open_notes
 #
-# Yes I use tabs.  Set to 2 spaces.  Looks so weird on github, right?!  I mean 8 spaces?!? seriously?
-# 
 
 import sublime
 import sublime_plugin
