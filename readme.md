@@ -7,7 +7,7 @@ When a new window is opened with a single folder:
 
 ## To Install
 
-    cd "$HOME/Library/Application Support/Sublime Text 3/Packages/auto_open_notes/notes.txt"
+    cd "$HOME/Library/Application Support/Sublime Text 3/Packages"
     git clone https://github.com/noahcoad/auto_open_notes.git
 
 
