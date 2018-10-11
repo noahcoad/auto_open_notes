@@ -7,6 +7,8 @@
 #
 # https://github.com/noahcoad/auto_open_notes
 #
+# Yes I'm using 2 spaces for indentation.  You can still see it, w/out going overboard.
+# 
 
 import sublime
 import sublime_plugin
