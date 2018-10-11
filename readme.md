@@ -13,6 +13,8 @@ When a new window is opened with a single folder:
 
 ## To Use
 
+Try having a notes.txt or readme.md file in a folder and opening that folder in sublime.
+
     mkdir ~/tmp
     echo hello world > ~/tmp/notes.txt
     subl ~/tmp
