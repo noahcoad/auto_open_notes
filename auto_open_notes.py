@@ -22,65 +22,65 @@ window_markers = []
 files = ['notes.txt', 'readme.md', 'readme.txt', 'readme']
 
 class auto_open_notes(sublime_plugin.EventListener):
-	def on_new_async(self, view):
+  def on_new_async(self, view):
 
-		# expect to open default files, if we don't find a .sublime.autoopen file
-		autoopen_defaults = True
+    # expect to open default files, if we don't find a .sublime.autoopen file
+    autoopen_defaults = True
 
-		# track state across events
-		global window_markers
+    # track state across events
+    global window_markers
 
-		# view and window are live
-		if view and view.window():
+    # view and window are live
+    if view and view.window():
 
-			# keep reference to this window
-			w = view.window()
+      # keep reference to this window
+      w = view.window()
 
-			# get id of the window to prevent re-opening file
-			wid = str(w.id())
+      # get id of the window to prevent re-opening file
+      wid = str(w.id())
 
-			# only autoopen a window once
-			if wid not in window_markers:
+      # only autoopen a window once
+      if wid not in window_markers:
 
-				# keep track we've already tried to open a file for this window
-				window_markers.append(wid)
-				
-				# make sure window has more than one view
-				if len(w.views()) == 0:
+        # keep track we've already tried to open a file for this window
+        window_markers.append(wid)
+        
+        # make sure window has more than one view
+        if len(w.views()) == 0:
 
-					# for autoopen files, check each folder in the project
-					for folder in w.folders():
-						autoopen = os.path.join(folder, '.sublime.autoopen')
-						
-						# if an autoopen file exists, open each file listed in there
-						if os.path.exists(autoopen):
+          # for autoopen files, check each folder in the project
+          for folder in w.folders():
+            autoopen = os.path.join(folder, '.sublime.autoopen')
+            
+            # if an autoopen file exists, open each file listed in there
+            if os.path.exists(autoopen):
 
-							# a .sublime.autoopen file was found, so don't open notes.txt etc by default
-							autoopen_defaults = False
+              # a .sublime.autoopen file was found, so don't open notes.txt etc by default
+              autoopen_defaults = False
 
-							# get a file name on each line, ignore lines starting with "#"
-							for line in [x.strip() for x in open(autoopen).readlines() if len(x) > 0 and x[0:1] != "#"]:
-								# use project folder as base for relative paths
-								# TODO: also support absolute path resolution
-								file = os.path.join(folder, line)
+              # get a file name on each line, ignore lines starting with "#"
+              for line in [x.strip() for x in open(autoopen).readlines() if len(x) > 0 and x[0:1] != "#"]:
+                # use project folder as base for relative paths
+                # TODO: also support absolute path resolution
+                file = os.path.join(folder, line)
 
-								# check to see if the file exists and open it
-								if os.path.exists(file):                     
-									w.open_file(file)
+                # check to see if the file exists and open it
+                if os.path.exists(file):                     
+                  w.open_file(file)
 
-					# if there isn't a .sublime.autoopen file, then check the defaults
-					if autoopen_defaults:
+          # if there isn't a .sublime.autoopen file, then check the defaults
+          if autoopen_defaults:
 
-						# make sure window has exactly one folder
-						if len(w.folders()) == 1:
+            # make sure window has exactly one folder
+            if len(w.folders()) == 1:
 
-							# check each type of file supported
-							for x in files:
+              # check each type of file supported
+              for x in files:
 
-								# look for file in the main folder
-								file = os.path.join(w.folders()[0], x)
+                # look for file in the main folder
+                file = os.path.join(w.folders()[0], x)
 
-								# if it exists, open the file and we're done
-								if os.path.exists(file):                     
-									w.open_file(file)
-									return
+                # if it exists, open the file and we're done
+                if os.path.exists(file):                     
+                  w.open_file(file)
+                  return
