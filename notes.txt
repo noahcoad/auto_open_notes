@@ -3,3 +3,4 @@ auto_open_notes.py
 sublime.log_commands(True)
 ../notes.txt
 ~/code/prjs/sublime/notes.txt
+https://github.com/noahcoad/auto_open_notes
