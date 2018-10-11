@@ -1,0 +1,5 @@
+auto_open_notes.py
+~/tmp
+sublime.log_commands(True)
+../notes.txt
+~/code/prjs/sublime/notes.txt
