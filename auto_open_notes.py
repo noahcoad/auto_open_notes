@@ -5,7 +5,7 @@
 # list the files that should automatically be opened when this folder is opened
 # that will override tring to open the default notes.txt, readme.md, readme files
 #
-# https://github.com/noahcoad/auto_open_notes
+# https://github.com/noahcoad/sublime_auto_open_notes
 #
 
 import sublime, sublime_plugin
@@ -42,3 +42,10 @@ class auto_open_notes(sublime_plugin.EventListener):
 								if os.path.exists(file):                     # if it exists
 									w.open_file(file)                          # open the file 
 									return                                     # and we're done
+
+
+# p.s. Yes, I'm using hard tabs for indentation.  bite me =P
+# set tabs to whatever level of indentation you like in your editor 
+# for crying out loud, at least they're consistent here, and use 
+# the ST3 command "Indentation: Convert to Spaces", which will convert
+# to spaces if you really need to be part of the 'soft tabs only' crowd =)

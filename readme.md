@@ -1,20 +1,12 @@
 # Auto Open Notes - a Sublime Text 3 Plugin
 
 When a new window is opened with a single folder:
-1. A `.sublime.autoopen` file is looked for.  If it exists, each file listed in the file is then opened
-2. Otherwise it'll look for a `notes.txt`, `readme.md`, `readme.txt`, then `readme` files and opens the first
+1. A `.sublime.autoopen` file is looked for in the folder.  If it exists, each file listed in the file is then opened.
+2. Otherwise it'll look for a `notes.txt`, `readme.md`, `readme.txt`, then `readme` files in that order and opens the first it finds.
 
 
 ## To Install
-
-    cd "$HOME/Library/Application Support/Sublime Text 3/Packages"
-    git clone https://github.com/noahcoad/auto_open_notes.git
-
-    # then test it!
-    subl auto_open_notes
-
-    # when opening the folder, the notes.txt and 
-    # auto_open_notes.py files should have automatically opened as well
+Use WBond's [Package Control](https://packagecontrol.io/)
 
 
 ## To Use

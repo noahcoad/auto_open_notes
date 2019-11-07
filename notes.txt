@@ -6,3 +6,4 @@ sublime.log_commands(True)
 https://github.com/noahcoad/auto_open_notes
 backup: zip -r ~/code/prjs/sublime/auto_open_notes/backup.zip "/Users/ncoad/Library/Application Support/Sublime Text 3/Packages/auto_open_notes"
 https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.EventListener
+ln -s $HOME/dropbox/code/prjs/sublime/auto_open_notes $HOME/dropbox/code/conf/sublime-text-3/Packages/
