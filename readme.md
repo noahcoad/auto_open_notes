@@ -19,8 +19,9 @@ Try having a notes.txt or readme.md file in a folder and opening that folder in 
 
 ## See Also
 Check out my other Sublime Text 3 plugins:
-* [Open URL](https://github.com/noahcoad/open-url)
-* [Google Spell Check](https://github.com/noahcoad/google-spell-check)
+* [Open URL](https://github.com/noahcoad/open-url) .. hit a hotkey to open the url/file/folder under the cursor
+* [Google Spell Check](https://github.com/noahcoad/google-spell-check) .. uses Google to check words and phrases
+* [Task List](https://github.com/noahcoad/sublime_task_list) .. toggles task list icons on a line, like ✅
 
 
 ## The sweet flow...
